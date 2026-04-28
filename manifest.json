@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Facebook_Note",
   "version": "1.0.0",
-  "description": "Mở khóa giới hạn ghi chú Facebook — viết tới 10.000 ký tự, tùy chỉnh thời hạn, chọn đối tượng xem và đính kèm nhạc. 🚀",
+  "description": "Tạo ghi chú Facebook tối đa 600 ký tự, tùy chỉnh thời hạn, chọn đối tượng xem và đính kèm nhạc. 🚀",
   "permissions": [
     "activeTab",
     "scripting",

@@ -9712,7 +9712,7 @@ const Q = (e) => W(e, 119808, 119834),
       f.useEffect(() => {
         chrome.storage.local.get([le], (e) => {
           const t = e?.[le];
-          "string" == typeof t && t.length > 0 && l(t);
+          "string" == typeof t && t.length > 0 && l(t.slice(0, 600));
         });
       }, []),
       f.useEffect(() => {
@@ -10141,7 +10141,7 @@ const Q = (e) => W(e, 119808, 119834),
         ),
           me({ type: "success", message: We("share_template.copied") }));
       }, [a, c, i, J, We, lt]),
-      ut = (ye / 1e4) * 100,
+      ut = (ye / 600) * 100,
       st = ut < 50 ? "safe" : ut < 80 ? "warning" : "danger",
       ct = f.useMemo(() => new Set(C), [C]),
       dt = f.useMemo(
@@ -10342,8 +10342,9 @@ const Q = (e) => W(e, 119808, 119834),
                       className: "note-textarea",
                       placeholder: We("composer.placeholder"),
                       value: a,
-                      onChange: (e) => l(e.target.value),
+                      onChange: (e) => l(e.target.value.slice(0, 600)),
                       disabled: "ready" !== n,
+                      maxLength: 600,
                     }),
                     d.jsxs("div", {
                       className: "char-counter",
@@ -10357,7 +10358,7 @@ const Q = (e) => W(e, 119808, 119834),
                         }),
                         d.jsxs("span", {
                           className: "char-text",
-                          children: [ye, " / ", 1e4],
+                          children: [ye, " / ", 600],
                         }),
                       ],
                     }),

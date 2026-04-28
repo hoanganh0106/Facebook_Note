@@ -1,0 +1,116 @@
+.music-segment-panel {
+  border: 1px solid rgba(59, 130, 246, .2);
+  border-radius: var(--radius-sm);
+  background: rgba(59, 130, 246, .08);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.music-segment-header,
+.music-segment-times,
+.music-segment-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.music-segment-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.music-segment-range {
+  width: 100%;
+  accent-color: var(--primary);
+}
+
+.music-segment-time {
+  font-size: 11px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.music-segment-btn {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .08);
+  color: var(--text-1);
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.music-segment-preview-btn {
+  width: 34px;
+  min-width: 34px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-segment-icon {
+  width: 15px;
+  height: 15px;
+  display: block;
+  fill: currentColor;
+}
+
+.music-segment-spinner {
+  width: 14px;
+  height: 14px;
+  display: block;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 999px;
+  animation: musicSegmentSpin .75s linear infinite;
+}
+
+.music-segment-btn:hover:not(:disabled) {
+  border-color: rgba(59, 130, 246, .4);
+  background: rgba(59, 130, 246, .14);
+}
+
+.music-segment-btn:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.music-segment-status {
+  min-height: 16px;
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.music-segment-status.is-error {
+  color: #ff9aa7;
+}
+
+.music-segment-status.is-playing {
+  color: #93d5ff;
+}
+
+.hoang-anh-copyright {
+  align-self: center;
+  color: var(--text-3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1;
+  padding: 2px 0 4px;
+  text-align: center;
+  user-select: none;
+}
+
+@keyframes musicSegmentSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
