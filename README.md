@@ -19,4 +19,6 @@ A browser extension that allows you to take notes directly on Facebook.
 - `content.js`: Script running in the context of Facebook pages to interact with the DOM if needed.
 
 ## License
-MIT
+Apache License 2.0
+
+Copyright 2026 Nguyen Hoang Anh
